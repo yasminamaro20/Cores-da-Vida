@@ -1,29 +1,47 @@
 # Cores-da-Vida
-# 🌐 Cores da Vida - Site de Conscientização em Saúde
+# 🌐 Cores da Vida
+
+Projeto educacional e informativo que reúne campanhas de conscientização em saúde, como **Novembro Azul**, **Outubro Rosa**, prevenção de doenças transmissíveis e métodos contraceptivos.  
+O site é responsivo, acessível e utiliza ícones de fitas coloridas para representar os meses de campanhas de saúde.
+
+---
 
 ## 📖 Escopo
-O projeto **Cores da Vida** é um site informativo que reúne campanhas de conscientização sobre a saúde, como o **Novembro Azul** (prevenção ao câncer de próstata), métodos contraceptivos e doenças transmissíveis.  
-O objetivo é oferecer informações acessíveis, educativas e confiáveis para a população em geral, de forma visual e organizada.
+O site **Cores da Vida** foi desenvolvido com o objetivo de:
+- Informar e conscientizar a população sobre campanhas de prevenção em saúde.
+- Oferecer acesso rápido a informações de qualidade sobre métodos contraceptivos e doenças transmissíveis.
+- Reunir, em um só espaço, os principais **meses coloridos** que representam causas de saúde.
+
+---
 
 ## 📝 Justificativa
-A conscientização sobre prevenção de doenças é essencial para a saúde pública.  
-Campanhas como **Novembro Azul** e a divulgação de métodos contraceptivos ajudam a reduzir riscos, promover o autocuidado e incentivar hábitos saudáveis.  
-Este projeto busca contribuir para a educação em saúde através da tecnologia, democratizando o acesso a informações confiáveis.
+A prevenção é uma das ferramentas mais importantes para a saúde pública.  
+Campanhas como **Novembro Azul** (câncer de próstata) e **Outubro Rosa** (câncer de mama) salvam vidas quando divulgadas corretamente.  
+O projeto busca promover a **educação em saúde** de forma simples, visual e acessível, incluindo recursos de acessibilidade como o **VLibras**, garantindo inclusão digital.
+
+---
 
 ## 🛠️ Tecnologias Utilizadas
 - **HTML5** → Estrutura das páginas  
-- **CSS3** → Estilização e design responsivo  
-- **Bootstrap 5** → Componentes prontos e responsividade  
+- **CSS3** → Estilização personalizada  
+- **Bootstrap 5** → Layout responsivo e componentes prontos  
 - **JavaScript** → Interatividade no site  
-- **Git/GitHub** → Controle de versão e hospedagem do projeto  
+- **VLibras** → Plugin de acessibilidade em Libras  
+- **Git/GitHub** → Versionamento e hospedagem do projeto  
+
+---
 
 ## 🌐 APIs Utilizadas
-- (Caso não tenha APIs ainda, você pode colocar futuramente, por exemplo:)
-  - API de Saúde Pública do Ministério da Saúde (para dados estatísticos)  
-  - API de notícias para atualização de campanhas  
+- **VLibras API** (https://vlibras.gov.br/app) → Inclusão de acessibilidade em Língua Brasileira de Sinais.  
 
-## 🎨 Protótipo (Wireframe)
-O wireframe do site está disponível na pasta [`/docs/wireframe`](./docs/wireframe).  
-O protótipo ilustra a navegação principal e os componentes de interface.  
+*(No futuro, podem ser integradas APIs de dados de saúde pública para informações dinâmicas.)*
+
+---
+
+## 🎨 Protótipo (Canva)
+O protótipo (wireframe) do site está disponível na pasta https://www.canva.com/design/DAGyrj64HO8/TAn_aQYijPsyigiQ5537oQ/edit?utm_content=DAGyrj64HO8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+Ele mostra a organização da **topbar com fitas coloridas**, o **carrossel de campanhas** e os **cards de conteúdos**.
+
+---
 
 ## 🚀 Estrutura do Repositório
