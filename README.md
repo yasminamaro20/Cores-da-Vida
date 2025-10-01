@@ -39,7 +39,7 @@ O projeto busca promover a **educação em saúde** de forma simples, visual e a
 ---
 
 ## 🎨 Protótipo (Canva)
-O protótipo (wireframe) do site está disponível na pasta https://www.canva.com/design/DAGyrj64HO8/TAn_aQYijPsyigiQ5537oQ/edit?utm_content=DAGyrj64HO8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+O protótipo (canva) do site está disponível na pasta https://www.canva.com/design/DAGyrj64HO8/TAn_aQYijPsyigiQ5537oQ/edit?utm_content=DAGyrj64HO8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 Ele mostra a organização da **topbar com fitas coloridas**, o **carrossel de campanhas** e os **cards de conteúdos**.
 
 ---
