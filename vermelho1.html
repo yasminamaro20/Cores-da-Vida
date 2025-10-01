@@ -1,245 +1,136 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste Online de ISTs</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campanha Junho Vermelho 2025 incentiva doação de sangue e homenagea doadores </title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+      color: #333;
+      background: #f8f9fc;
+    }
 
-        /* Estilo do container principal do teste */
-        .test-container {
-            max-width: 600px;
-            width: 100%;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            overflow: hidden; /* Garante que a imagem se ajuste */
-            margin-top: 20px;
-        }
+    .btn-voltar {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      display: inline-block;
+      padding: 10px 22px;
+      background: linear-gradient(90deg, #ad0d0d, #961c1c);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+      z-index: 1000;
+    }
+    .btn-voltar:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+    }
 
-        /* Estilo da seção do cabeçalho do teste (imagem) */
-        .test-header img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover;
-            border-bottom: 3px solid #007bff; /* Linha azul clara */
-        }
-        
-        /* Estilo da área de conteúdo (texto e botões) */
-        .test-content {
-            padding: 30px;
-        }
+    .container {
+      max-width: 950px;
+      margin: 80px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
 
-        /* Estilo do título principal */
-        h1 {
-            font-size: 1.8rem;
-            color: #333;
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
+    .titulo {
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 25px;
+      color: #c21313;
+      font-weight: bold;
+    }
 
-        /* Estilo do parágrafo de introdução */
-        .introduction {
-            color: #555;
-            margin-bottom: 25px;
-        }
+    .image-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .image-container img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .caption {
+      font-size: 15px;
+      color: #555;
+      margin-top: 8px;
+      font-style: italic;
+    }
 
-        /* Estilo da pergunta atual */
-        .question-text {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: #222;
-        }
+    p {
+      text-align: justify;
+      margin-bottom: 18px;
+      font-size: 1.05rem;
+    }
 
-        /* Estilo das caixas de opção (Sim/Não) */
-        .option-box {
-            border: 1px solid #a8dadc; /* Borda azul clara */
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 15px;
-            cursor: pointer;
-            transition: background-color 0.2s, border-color 0.2s;
-            font-size: 1.1rem;
-            color: #333;
-            user-select: none; /* Impede a seleção de texto */
-        }
+    .first-letter {
+      font-size: 34px;
+      font-weight: bold;
+      color: #b91616;
+      float: left;
+      line-height: 1;
+      margin-right: 8px;
+    }
 
-        /* Efeito ao passar o mouse ou clicar */
-        .option-box:hover {
-            background-color: #e0f7fa; /* Fundo mais claro ao passar o mouse */
-            border-color: #007bff;
-        }
+    strong {
+      color: #e20c0c;
+    }
 
-        /* Estilo do resultado */
-        .result-message {
-            padding: 20px;
-            text-align: center;
-            border: 2px solid #007bff;
-            border-radius: 8px;
-            background-color: #e0f7fa;
-            font-size: 1.1rem;
-            font-weight: bold;
-            color: #007bff;
-        }
-        
-        /* Estilo do botão de reinício */
-        .restart-button {
-            display: block;
-            width: 100%;
-            padding: 12px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: background-color 0.3s;
-        }
-        .restart-button:hover {
-            background-color: #0056b3;
-        }
-
-    </style>
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+      margin: 30px 0 10px;
+    }
+  </style>
 </head>
 <body>
+  <a href="index.html" class="btn-voltar">← Voltar</a>
 
-    <div class="test-container">
-        <div class="test-content">
-            <h1>Teste online de IST's</h1>
-            <p class="introduction">Se acha que pode ter IST, selecione o que está sentindo para saber as suas chances:</p>
-        </div>
+  <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 
-        <div class="test-header">
-            <img src="https://via.placeholder.com/600x250/f0f8ff/4682b4?text=Imagem+Médica+do+Teste" alt="Médico anotando informações">
-        </div>
+  <div class="container">
+    <h1 class="titulo">Campanha Junho Vermelho 2025 incentiva doação de sangue e homenagea doadores </h1>
 
-        <div class="test-content" id="quiz-area">
-            <p class="question-text" id="question"></p>
-            <div id="options">
-                </div>
-            
-            <div id="result-display" style="display:none;"></div>
-        </div>
-
+    <div class="image-container">
+      <img src="img/WhatsApp Image 2025-09-29 at 16.06.05.jpeg" alt="Abril Verde alerta para a saúde e segurança no trabalho">
     </div>
 
-    <script>
-        // Array de perguntas do teste
-        const questions = [
-            {
-                text: "Apresenta febre?",
-                points: { sim: 1, nao: 0 } // Sim aumenta as chances (1 ponto)
-            },
-            {
-                text: "Sentiu dor ou ardor ao urinar?",
-                points: { sim: 2, nao: 0 } // Dor/ardor é um sintoma mais específico (2 pontos)
-            },
-            {
-                text: "Notou alguma ferida ou úlcera nos órgãos genitais ou boca?",
-                points: { sim: 3, nao: 0 } // Feridas/úlceras é um sintoma importante (3 pontos)
-            },
-            {
-                text: "Teve corrimento ou secreção anormal?",
-                points: { sim: 2, nao: 0 }
-            },
-        ];
+    <p><span class="first-letter">O</span>oa Vista (RR) - Este mês é dedicado à doação de sangue, culminando no Dia Mundial do Doador de Sangue em 14 de junho, uma data instituída há 20 anos pela Assembleia Mundial da Saúde. O objetivo é estimular novos doadores e, principalmente, agradecer a todos que apoiam essa causa, que precisa ser permanente.
 
-        let currentQuestionIndex = 0;
-        let totalScore = 0;
+A importância da doação regular
 
-        const questionEl = document.getElementById('question');
-        const optionsEl = document.getElementById('options');
-        const quizAreaEl = document.getElementById('quiz-area');
-        const resultDisplayEl = document.getElementById('result-display');
+Campanhas como estas são importantes, uma vez que a falta de conscientização e a desinformação são os maiores entraves para incentivar a doação de sangue. Segundo profissionais da rede Ebserh, ainda há muitos mitos envolvendo o processo de doação e, por isso, recorrer à informação de qualidade e mostrar o impacto positivo da doação são fundamentais para manter os estoques dos bancos de sangue.
 
-        // Função para carregar a próxima pergunta
-        function loadQuestion() {
-            if (currentQuestionIndex < questions.length) {
-                const q = questions[currentQuestionIndex];
-                questionEl.textContent = q.text;
+Hematologistas e demais profissionais envolvidos nessas atividades explicam que o sangue não pode ser fabricado ou comprado como um medicamento na farmácia, não tem substituto e, além disso, possui prazo de validade. Por isso, a doação deve ser contínua, mantendo o material à disposição dos pacientes.
 
-                // Limpa opções antigas e cria as novas
-                optionsEl.innerHTML = ''; 
+O sangue doado é fracionado e transformado em quatro hemocomponentes: concentrado de hemácias, plasma, plaquetas e crioprecipitado. Esses hemocomponentes são distribuídos para as agências transfusionais dos hospitais, onde são utilizados em pacientes internados em tratamentos ou em situações de urgência, como acidentes.o da Saúde e Prevenção de Riscos e Doenças – Promoprev, oferecendo cuidado contínuo a cerca de 2,8 milhões de beneficiários. 
+    <h2>Seja um doador de sangue </h2>
+    <p>Para doar, é preciso ter entre 16 e 69 anos, sendo que a primeira doação deve ser feita até os 60 anos; ter mais de 50 quilos e estar em boas condições de saúde, sem sintomas de gripe, febre ou infecções recentes. No processo de doação, sempre há uma triagem cuidadosa antes da doação para garantir segurança ao doador e ao receptor. São feitos exames para detectar doenças transmissíveis, como HIV, hepatites B e C, sífilis, doença de Chagas, HTLV, entre outras.
 
-                // Cria o botão "Sim"
-                const optionSim = document.createElement('div');
-                optionSim.className = 'option-box';
-                optionSim.textContent = 'Sim.';
-                optionSim.onclick = () => handleAnswer('sim');
-                optionsEl.appendChild(optionSim);
+Assim que o doador chega ao Hemocentro da sua cidade, ele recebe orientações sobre o processo de doação, passa por uma triagem clínica e, estando apto, é encaminhado para a coleta. O sangue coletado é, então, submetido a diversas análises e testes laboratoriais para garantir sua segurança e qualidade. Tudo isso visa assegurar que tanto doadores quanto receptores se sintam seguros neste processo, que deve ser permanente.
 
-                // Cria o botão "Não"
-                const optionNao = document.createElement('div');
-                optionNao.className = 'option-box';
-                optionNao.textContent = 'Não.';
-                optionNao.onclick = () => handleAnswer('nao');
-                optionsEl.appendChild(optionNao);
-
-            } else {
-                showResults();
-            }
-        }
-
-        // Função para lidar com a resposta do usuário
-        function handleAnswer(answer) {
-            const q = questions[currentQuestionIndex];
-            
-            // Adiciona a pontuação da resposta ao placar total
-            totalScore += q.points[answer]; 
-
-            // Vai para a próxima pergunta
-            currentQuestionIndex++; 
-            loadQuestion();
-        }
-
-        // Função para exibir o resultado final
-        function showResults() {
-            // Esconde a área do quiz
-            questionEl.style.display = 'none';
-            optionsEl.style.display = 'none';
-            
-            // Determina a mensagem com base na pontuação total
-            let resultText = '';
-            if (totalScore >= 5) {
-                resultText = `Pontuação total: ${totalScore}. Suas chances são Altas. É fundamental que você procure um médico ou um centro de saúde o mais rápido possível para fazer o teste definitivo e receber o diagnóstico correto.`;
-            } else if (totalScore >= 2) {
-                resultText = `Pontuação total: ${totalScore}. Suas chances são Médias. Se os sintomas persistirem, procure um profissional de saúde. Não se automedique.`;
-            } else {
-                resultText = `Pontuação total: ${totalScore}. Suas chances são Baixas. Continue monitorando seus sintomas e lembre-se de sempre usar proteção em suas relações.`;
-            }
-            
-            // Exibe o resultado e o botão de reiniciar
-            resultDisplayEl.style.display = 'block';
-            resultDisplayEl.innerHTML = `
-                <div class="result-message">${resultText}</div>
-                <button class="restart-button" onclick="restartQuiz()">Fazer Teste Novamente</button>
-            `;
-        }
-        
-        // Função para reiniciar o teste
-        function restartQuiz() {
-            currentQuestionIndex = 0;
-            totalScore = 0;
-            questionEl.style.display = 'block';
-            optionsEl.style.display = 'block';
-            resultDisplayEl.style.display = 'none';
-            loadQuestion();
-        }
-
-        // Inicia o teste ao carregar a página
-        window.onload = loadQuestion;
-    </script>
-
+Dessa maneira, a campanha do Junho Vermelho tem o objetivo de conscientizar a população sobre a importância da doação regular de sangue. Muitos pacientes dependem das transfusões de sangue para viver, e a única forma de obtê-lo é por meio da doação voluntária de alguém. Além disso, a campanha é uma forma de reconhecimento aos doadores de sangue, que realizam esse ato altruísta em prol dos pacientes.vida sem manifestar os sintomas da Aids. Essa conquista se deve ao fortalecimento das ações do Ministério da Saúde para ampliar a oferta do melhor tratamento disponível para o HIV, com a incorporação de medicamentos de primeira linha para tratar os pacientes.
 </body>
 </html>
