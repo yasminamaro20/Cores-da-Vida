@@ -43,5 +43,3 @@ O protótipo (wireframe) do site está disponível na pasta https://www.canva.co
 Ele mostra a organização da **topbar com fitas coloridas**, o **carrossel de campanhas** e os **cards de conteúdos**.
 
 ---
-
-## 🚀 Estrutura do Repositório
