@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conscientização - Doenças</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.7;
+      background-color: #fdfdfd;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(90deg, #6a0dad, #ff6600);
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    /* Botão Voltar */
+    .btn-voltar {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      display: inline-block;
+      padding: 10px 20px;
+      background: linear-gradient(90deg, #6a0dad, #ff6600);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+
+    .btn-voltar:hover {
+      background: linear-gradient(90deg, #ff6600, #6a0dad);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+    }
+
+    .imagem-centro {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .imagem-centro img {
+      max-width: 80%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    h2 {
+      margin-top: 40px;
+      color: #6a0dad;
+      font-size: 1.4rem;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 30px;
+    }
+
+    ul li h3 {
+      font-size: 1.2rem;
+      color: #ff6600;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: #f0f0f0;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Conscientização em Saúde</h1>
+  </header>
+
+  <!-- Botão Voltar -->
+  <a href="index.html" class="btn-voltar">← Voltar</a>
+
+  <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <!-- Imagem centralizada -->
+  <div class="imagem-centro">
+    <img src="img/fevereiro.png" alt="Campanha Fevereiro Roxo e Laranja">
+  </div>
+
+  <main>
+    <p>
+      Durante este mês, as cores roxa e laranja são utilizadas em diversos meios de comunicação com o objetivo de atentar para a conscientização e combate de algumas doenças.
+    </p>
+    <p>
+      A cor roxa foi escolhida para a conscientização do Lúpus, da Fibromialgia e do Mal de Alzheimer. Já a cor laranja foi incluída na campanha para conscientizar um dos tipos mais graves de câncer, a Leucemia.
+    </p>
+
+    <ul>
+      <li>
+        <h3>Lúpus</h3>
+        <p>
+        O Lúpus é caracterizado como um distúrbio crônico que faz com que o organismo produza mais anticorpos que o necessário para manter o organismo em pleno funcionamento. Os anticorpos em excesso passam a atacar o organismo, causando inflamações nos rins, pulmões, pele e articulações. Segundo o Ministério da Saúde, o Lúpus Sistêmico (Les) é a forma mais séria da doença e também a mais comum afetando aproximadamente 70% dos pacientes com Lúpus. Ele afeta principalmente mulheres, sendo 9 em 10 pacientes com o risco mais elevado durante a idade fértil.
+        </p>
+      </li>
+
+      <li>
+        <h3>Fibromialgia</h3>
+        <p>
+          Já a Fibromialgia ataca especificamente as articulações, causando dores por todo o corpo, principalmente nos músculos e tendões. A síndrome também provoca cansaço excessivo, alterações no sono, ansiedade e depressão. A doença pode aparecer depois de eventos graves como um trauma físico, psicológico ou mesmo uma infecção. O motivo pelo qual pessoas desenvolvem a doença ainda é desconhecido. No Brasil, a Sociedade Brasileira de Reumatologia (SBR) calcula que a fibromialgia afeta cerca de 3% da população. De cada 10 pacientes com fibromialgia, sete a nove são mulheres.
+        </p>
+      </li>
+
+      <li>
+        <h3>Alzheimer</h3>
+        <p>
+     O Alzheimer é uma doença neuro-degenerativa que provoca o declínio das funções cognitivas, reduzindo as capacidades de trabalho e relação social. Com o passar do tempo, ela também interfere no comportamento e personalidade da pessoa, causando consequências como a perda de memória. O Alzheimer é a causa mais comum de demência – um grupo de distúrbios cerebrais que causam a perda de habilidades intelectuais e sociais. No Brasil, existem cerca de 15 milhões de pessoas com mais de 60 anos de idade. Seis por cento delas têm a doença de Alzheimer, segundo dados da Associação Brasileira de Alzheimer (Abraz).
+        </p>
+      </li>
+
+      <li>
+        <h3>Leucemia</h3>
+        <p>
+          Leucemia é uma doença maligna dos glóbulos brancos, geralmente, de origem desconhecida. Dados do Instituto Nacional do Câncer (INCA) apontam que em 2019 a leucemia teve mais de 10 mil novos casos. Os sintomas incluem anemia, palidez, sonolência, fadiga, palpitação, manchas roxas na pele ou pontos vermelhos, bem como gânglios linfáticos inchados, perda de peso, febre e dores nas articulações e ossos.
+        A campanha também frisa a importância da doação de medula óssea. A doação é muito importante, pois a cada cem mil pacientes, apenas um doador é compatível.
+        Procure orientação em uma Unidade de Saúde.
+        </p>
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>Campanha de Conscientização &copy; 2025</p>
+  </footer>
+</body>
+</html>

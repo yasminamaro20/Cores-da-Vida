@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Informativo - Dia Mundial da Conscientização do Autismo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #d93b2b; /* vermelho do cabeçalho */
+      --muted: #6b6b6b;
+      --bg: #f7f7f7;
+      --card-bg: #ffffff;
+      --max-width: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: #222;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===== Botão Voltar ===== */
+    .btn-voltar {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      padding: 10px 22px;
+      background: linear-gradient(90deg, #fa6d68, #972bfc);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+      z-index: 1000;
+    }
+
+    header {
+      background: transparent;
+      padding: 28px 16px 6px 16px;
+    }
+
+    .brand {
+      color: var(--accent);
+      font-weight: 800;
+      letter-spacing: 1px;
+      border-bottom: 1px dotted #ddd;
+      display: inline-block;
+      padding-bottom: 8px;
+      font-size: 18px;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: var(--max-width);
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 24px;
+      border-radius: 6px;
+      box-shadow: 0 6px 18px rgba(30,30,30,0.06);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 28px;
+      align-items: start;
+    }
+
+    h1.title {
+      font-size: 20px;
+      margin-bottom: 14px;
+      letter-spacing: 0.6px;
+      color: #123;
+      text-transform: uppercase;
+    }
+
+    h2.headline {
+      margin: 16px 0 10px 0;
+      font-size: 18px;
+      color: #1a3;
+      font-weight: 700;
+    }
+
+    p {
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+
+    a.link {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    .image-frame {
+      background: #f0f0f0;
+      border-radius: 6px;
+      overflow: hidden;
+      padding: 6px;
+      border: 1px solid #e6e6e6;
+    }
+
+    .image-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    /* ===== Responsividade ===== */
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .image-frame {
+        order: -1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Botão Voltar -->
+  <a href="index.html" class="btn-voltar">← Voltar</a>
+
+  <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  <main>
+    <div class="wrap">
+      <div class="card">
+        <div class="grid">
+          <article>
+            <h1 class="title">02 DE ABRIL: DIA MUNDIAL DA CONSCIENTIZAÇÃO DO AUTISMO</h1>
+            <p class="meta">O Dia Mundial da Conscientização do Autismo, 2 de abril, foi criado pela Organização das Nações Unidas (ONU) em 2007.</p>
+
+            <h2 class="headline">Por que essa data é importante?</h2>
+            <p>O objetivo é levar informação à população para reduzir a discriminação e o preconceito contra os indivíduos que apresentam o Transtorno do Espectro Autista (TEA). O autismo é uma condição de saúde caracterizada por desafios em habilidades sociais, comportamentos repetitivos, fala e comunicação não-verbal; entretanto, terapias adequadas a cada caso podem auxiliar essas pessoas a melhorar sua relação com o mundo.</p>
+
+            <p>Indivíduos com TEA podem e devem conquistar seu lugar na sociedade, porque eles também têm aptidões e talentos específicos em determinadas áreas do conhecimento. Muitos podem, por exemplo, concentrar-se fortemente em apenas uma coisa; por isso, alguns tornam-se pianistas ou cantores incríveis.</p>
+
+            <p>Como forma de divulgação, a campanha "Respeito para todo Espectro" usa a hashtag: <strong>#RESPECTRO</strong>.</p>
+
+            <p>Saiba mais em: <a class="link" href="http://www.revistaautismo.com.br" target="_blank" rel="noopener">www.revistaautismo.com.br</a></p>
+
+            <h3 class="meta">#ParaCegoVer</h3>
+            <p class="meta">A imagem possui fundo azul escuro e três esferas nas cores amarela, verde e vermelho. Na esfera amarela, do lado superior direito, está escrito "02 de abril — Dia Mundial da Conscientização do Autismo". No lado superior esquerdo está o símbolo do Transtorno do Espectro Autista, composto por um quebra-cabeça nas cores azul, amarelo e vermelho. No lado inferior esquerdo, o logotipo da Unidade de Políticas Inclusivas – UPI.</p>
+          </article>
+
+          <aside class="image-frame">
+            <img src="img/autimos.jpeg" alt="Cartaz 02 de abril - Dia Mundial da Conscientização do Autismo">
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

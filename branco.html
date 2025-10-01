@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janeiro Branco - Cuidando da Mente</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+        :root {
+            --cor-primaria: #a3dfdf;
+            --cor-secundaria: #f0f8ff;
+            --cor-texto: #000;
+            --cor-destaque: #fff;
+            --cor-dropcap: #050505;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            background-color: var(--cor-secundaria);
+            color: var(--cor-texto);
+        }
+
+        a.btn-voltar {
+            display: inline-block;
+            margin: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: var(--cor-primaria);
+            color: var(--cor-destaque);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .hero {
+            background-color: var(--cor-primaria);
+            color: var(--cor-destaque);
+            text-align: center;
+            padding: 4rem 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
+            background-size: 20px 20px;
+            opacity: 0.3;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .section {
+            background-color: var(--cor-destaque);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            color: var(--cor-primaria);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid var(--cor-primaria);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .section h3 {
+            margin-top: 1.5rem;
+            color: var(--cor-primaria);
+        }
+    /* Botão Voltar */
+    .btn-voltar {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      display: inline-block;
+      padding: 10px 20px;
+      background: linear-gradient(90deg, #f1e1e8, #a3dfdf);
+      color: #0c0c0c;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+        .section p::first-letter {
+            float: left;
+            font-size: 3em;
+            color: var(--cor-dropcap);
+            font-weight: bold;
+            line-height: 1;
+            margin-right: 8px;
+        }
+
+        .section ul {
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .section li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Botão Voltar -->
+    <a href="index.html" class="btn-voltar">← Voltar</a>
+
+    <!-- VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+
+    <header class="hero">
+        <h1>Janeiro Branco</h1>
+        <p>Um convite para a reflexão sobre a saúde mental e emocional. Cuide da sua mente, ela é o seu maior bem!</p>
+    </header>
+
+    <main class="container">
+
+        <section class="section">
+            <h2>O que é Saúde Mental?</h2>
+
+            <p><strong>O Janeiro Branco</strong> é um movimento global focado na conscientização e promoção da saúde mental e emocional. Ele usa o primeiro mês do ano para simbolizar um novo começo, incentivando as pessoas a refletirem e a cuidarem de sua mente, assim como fazem com o corpo.</p>
+
+            <p><strong>O que é saúde mental?</strong> É um estado de bem-estar onde você consegue lidar com os desafios da vida, trabalhar de forma produtiva e contribuir para a sua comunidade. É um equilíbrio que permite que você use suas habilidades e atinja seu potencial.</p>
+
+            <p><strong>Como participar do movimento?</strong></p>
+            <ul>
+                <li><strong>Converse sobre o assunto:</strong> Ajuda a desmistificar a saúde mental.</li>
+                <li><strong>Busque ajuda profissional:</strong> Não hesite em procurar um psicólogo ou psiquiatra.</li>
+                <li><strong>Pratique o autocuidado:</strong> Reserve tempo para atividades que te dão prazer.</li>
+                <li><strong>Compartilhe informação:</strong> Use as redes sociais para espalhar a mensagem.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Benefícios e Saúde Mental</h2>
+
+            <p>
+                O ano de 2024 acabou de começar e com ele inicia-se a campanha Janeiro Branco, que visa alertar para os cuidados
+                com a saúde mental e emocional da população, a partir da prevenção das doenças decorrentes do estresse, como
+                ansiedade, depressão e pânico. As doenças mentais podem ser causadas por uma série de fatores, como genética,
+                estresse, abuso de substâncias e traumas. Nesse rol entram também os transtornos de humor, esquizofrenia e o
+                transtorno bipolar.
+            </p>
+
+            <p>
+                Esses transtornos decorrentes da saúde mental acabam afetando os indivíduos, que ficam impossibilitados
+                (temporária ou permanentemente) de exercer suas funções laborais. E é nesse ponto que entram os benefícios
+                previdenciários pagos pelo Instituto Nacional do Seguro Social (INSS). A concessão desses benefícios, no entanto,
+                está sujeita a critérios específicos.
+            </p>
+
+            <p>
+                Para os benefícios por incapacidade temporária e permanente é necessário ter qualidade de segurado e ter carência
+                mínima de 12 meses de contribuição previdenciária. No auxílio-doença, é fundamental comprovar a incapacidade
+                temporária para o trabalho, e na aposentadoria por invalidez, a incapacidade deve ser permanente.
+            </p>
+
+            <ul>
+                <li><strong>Benefício por incapacidade temporária</strong> (antigo auxílio-doença): concedido às pessoas que estão
+                    temporariamente incapacitadas para o trabalho em razão de uma doença mental.</li>
+                <li><strong>Benefício por incapacidade permanente</strong> (antiga aposentadoria por invalidez): concedido às
+                    pessoas que estão permanentemente incapacitadas para o trabalho por causa de uma doença mental.</li>
+                <li><strong>Benefício de Prestação Continuada (BPC)</strong>: destinado às pessoas com deficiência de qualquer
+                    idade e idosos com mais de 65 anos de idade que não tenham meios de se sustentar e se encontrem em estado de
+                    vulnerabilidade social.</li>
+            </ul>
+
+            <h3>Atenção</h3>
+            <p>
+                O BPC pode ser concedido mesmo sem que o beneficiário tenha trabalhado ou realizado contribuições ao INSS. No
+                entanto, para ter direito é necessário atender aos requisitos estabelecidos em lei, como comprovar a idade mínima
+                e a situação de vulnerabilidade socioeconômica.
+            </p>
+
+            <p>
+                Em todos os casos é necessário apresentar laudo e exames médicos que comprovem a existência da doença mental e a
+                incapacidade (temporária ou permanente) para o trabalho, com a respectiva Classificação Internacional de Doenças
+                (CID).
+            </p>
+
+            <h3>Passos para requerer o benefício</h3>
+            <p>
+                Para pedir o benefício no INSS, o cidadão deve passar por uma perícia médica para comprovar a incapacidade para o
+                trabalho. Caso o exame constate a incapacidade, o benefício é concedido. No caso do BPC, é necessário comprovar o
+                estado de vulnerabilidade social por meio de avaliação específica.
+            </p>
+
+            <h3>Como cuidar da saúde mental</h3>
+              </style>
+</head>
+<body>
+  <ul>
+    <li>Um primeiro passo é ter cautela com as expectativas. Criar metas que impliquem em mudanças de vida, rotina ou hábitos, sem o devido planejamento ou sem considerar as possibilidades reais e os recursos necessários, pode torná-las inatingíveis, gerando frustração e consequentemente sofrimento emocional.</li>
+    <li>É importante estabelecer metas tangíveis, com prazos mais curtos ou divididas em etapas. Não é necessário esperar uma época específica, como dezembro ou janeiro, para traçar planos ou avaliar o percurso, pois o que depende do comportamento pode ser buscado em qualquer momento do ano.</li>
+    <li>Ter uma atitude de autocobrança exagerada nesta época, poderá dificultar o reconhecimento dos esforços e conquistas ao longo do ano. O ideal é que o exercício de auto-observação seja cotidiano e realizado com generosidade e auto-acolhimento.</li>
+    <li>É natural que os acontecimentos, por vezes, não ocorram como esperado ou que as prioridades mudem no meio do caminho. Nesse caso, é fundamental reconhecer as qualidades, habilidades e recursos internos para lidar com as adversidades e, se necessário, “reprogramar a rota”.</li>
+    <li>É importante fazer atividades que tragam satisfação. Momentos de lazer, prática de hobbies, esportes ou atividade física propiciam bem-estar psíquico e são estratégias importantes para lidar com o estresse. Investir em bons hábitos alimentares e dormir bem também é essencial.</li>
+    <li>Para melhorar os padrões de sono, algumas estratégias de higiene do sono podem ajudar, tais como: ter uma rotina de horário para deitar e levantar, evitar o uso de equipamentos eletrônicos pelo menos 1h antes de ir para a cama, realizar atividades relaxantes preparatórias para o sono e manter o ambiente propício para dormir (escuro, silencioso, etc.).</li>
+    <li>Mantenha a consciência sobre os sentimentos. Identificar as emoções é fundamental para fazer mudanças em direção ao bem-estar, já que elas têm a função de comunicar sobre os gostos e necessidades individuais. Assim, ao reconhecer as emoções e o fluxo de pensamentos que as acompanham, é possível determinar de forma mais consciente o modo de agir e lidar com situações diversas.</li>
+    <li>Dê atenção ao momento presente. Pensar constantemente em coisas que já aconteceram ou poderão acontecer é um grande desencadeador de angústia. Portanto, é importante focar nas ações possíveis, naquilo que está no controle e aproveitar as experiências atuais.</li>
+    <li>O sofrimento emocional, associado ou não a um transtorno mental, pode ser prevenido ou atenuado se as pessoas conhecerem estratégias para cuidar da saúde mental. Reconhecer a presença dele é o primeiro passo para alcançar melhor qualidade de vida, pois a partir daí é possível buscar caminhos terapêuticos para lidar com os problemas emocionais.</li>
+  </ul>
+</body>
+</html>
+<h3>Curiosidades</h3>
+
+<h3>O que é Janeiro branco?</h3>
+<p>O Janeiro branco é uma campanha ao estilo da Campanha Outubro Rosa e da Campanha Novembro Azul.</p>
+<h3> Qual o seu objetivo?</h3>
+<p>O seu objetivo é chamar a atenção da humanidade para as questões e necessidades relacionadas à saúde mental e emocional das pessoas e das instituições humanas.
+</p>
+<h3> Por que Janeiro branco?</h3>
+<p>Porque, no primeiro mês do ano, em termos simbólicos e culturais, as pessoas estão mais propensas a pensarem em suas vidas, em suas relações sociais, em suas condições de existência, em suas emoções e em seus sentidos existenciais. E, como em uma “folha ou em uma tela em branco”, todas as pessoas podem ser inspiradas a escreverem ou a reescreverem as suas próprias histórias de vida.</p>
+     </section>
+    </main>
+
+</body>
+</html>

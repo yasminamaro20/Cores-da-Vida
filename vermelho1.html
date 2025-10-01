@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Online de ISTs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Estilo do container principal do teste */
+        .test-container {
+            max-width: 600px;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Garante que a imagem se ajuste */
+            margin-top: 20px;
+        }
+
+        /* Estilo da seção do cabeçalho do teste (imagem) */
+        .test-header img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            border-bottom: 3px solid #007bff; /* Linha azul clara */
+        }
+        
+        /* Estilo da área de conteúdo (texto e botões) */
+        .test-content {
+            padding: 30px;
+        }
+
+        /* Estilo do título principal */
+        h1 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        /* Estilo do parágrafo de introdução */
+        .introduction {
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        /* Estilo da pergunta atual */
+        .question-text {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        /* Estilo das caixas de opção (Sim/Não) */
+        .option-box {
+            border: 1px solid #a8dadc; /* Borda azul clara */
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: background-color 0.2s, border-color 0.2s;
+            font-size: 1.1rem;
+            color: #333;
+            user-select: none; /* Impede a seleção de texto */
+        }
+
+        /* Efeito ao passar o mouse ou clicar */
+        .option-box:hover {
+            background-color: #e0f7fa; /* Fundo mais claro ao passar o mouse */
+            border-color: #007bff;
+        }
+
+        /* Estilo do resultado */
+        .result-message {
+            padding: 20px;
+            text-align: center;
+            border: 2px solid #007bff;
+            border-radius: 8px;
+            background-color: #e0f7fa;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #007bff;
+        }
+        
+        /* Estilo do botão de reinício */
+        .restart-button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .restart-button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="test-container">
+        <div class="test-content">
+            <h1>Teste online de IST's</h1>
+            <p class="introduction">Se acha que pode ter IST, selecione o que está sentindo para saber as suas chances:</p>
+        </div>
+
+        <div class="test-header">
+            <img src="https://via.placeholder.com/600x250/f0f8ff/4682b4?text=Imagem+Médica+do+Teste" alt="Médico anotando informações">
+        </div>
+
+        <div class="test-content" id="quiz-area">
+            <p class="question-text" id="question"></p>
+            <div id="options">
+                </div>
+            
+            <div id="result-display" style="display:none;"></div>
+        </div>
+
+    </div>
+
+    <script>
+        // Array de perguntas do teste
+        const questions = [
+            {
+                text: "Apresenta febre?",
+                points: { sim: 1, nao: 0 } // Sim aumenta as chances (1 ponto)
+            },
+            {
+                text: "Sentiu dor ou ardor ao urinar?",
+                points: { sim: 2, nao: 0 } // Dor/ardor é um sintoma mais específico (2 pontos)
+            },
+            {
+                text: "Notou alguma ferida ou úlcera nos órgãos genitais ou boca?",
+                points: { sim: 3, nao: 0 } // Feridas/úlceras é um sintoma importante (3 pontos)
+            },
+            {
+                text: "Teve corrimento ou secreção anormal?",
+                points: { sim: 2, nao: 0 }
+            },
+        ];
+
+        let currentQuestionIndex = 0;
+        let totalScore = 0;
+
+        const questionEl = document.getElementById('question');
+        const optionsEl = document.getElementById('options');
+        const quizAreaEl = document.getElementById('quiz-area');
+        const resultDisplayEl = document.getElementById('result-display');
+
+        // Função para carregar a próxima pergunta
+        function loadQuestion() {
+            if (currentQuestionIndex < questions.length) {
+                const q = questions[currentQuestionIndex];
+                questionEl.textContent = q.text;
+
+                // Limpa opções antigas e cria as novas
+                optionsEl.innerHTML = ''; 
+
+                // Cria o botão "Sim"
+                const optionSim = document.createElement('div');
+                optionSim.className = 'option-box';
+                optionSim.textContent = 'Sim.';
+                optionSim.onclick = () => handleAnswer('sim');
+                optionsEl.appendChild(optionSim);
+
+                // Cria o botão "Não"
+                const optionNao = document.createElement('div');
+                optionNao.className = 'option-box';
+                optionNao.textContent = 'Não.';
+                optionNao.onclick = () => handleAnswer('nao');
+                optionsEl.appendChild(optionNao);
+
+            } else {
+                showResults();
+            }
+        }
+
+        // Função para lidar com a resposta do usuário
+        function handleAnswer(answer) {
+            const q = questions[currentQuestionIndex];
+            
+            // Adiciona a pontuação da resposta ao placar total
+            totalScore += q.points[answer]; 
+
+            // Vai para a próxima pergunta
+            currentQuestionIndex++; 
+            loadQuestion();
+        }
+
+        // Função para exibir o resultado final
+        function showResults() {
+            // Esconde a área do quiz
+            questionEl.style.display = 'none';
+            optionsEl.style.display = 'none';
+            
+            // Determina a mensagem com base na pontuação total
+            let resultText = '';
+            if (totalScore >= 5) {
+                resultText = `Pontuação total: ${totalScore}. Suas chances são Altas. É fundamental que você procure um médico ou um centro de saúde o mais rápido possível para fazer o teste definitivo e receber o diagnóstico correto.`;
+            } else if (totalScore >= 2) {
+                resultText = `Pontuação total: ${totalScore}. Suas chances são Médias. Se os sintomas persistirem, procure um profissional de saúde. Não se automedique.`;
+            } else {
+                resultText = `Pontuação total: ${totalScore}. Suas chances são Baixas. Continue monitorando seus sintomas e lembre-se de sempre usar proteção em suas relações.`;
+            }
+            
+            // Exibe o resultado e o botão de reiniciar
+            resultDisplayEl.style.display = 'block';
+            resultDisplayEl.innerHTML = `
+                <div class="result-message">${resultText}</div>
+                <button class="restart-button" onclick="restartQuiz()">Fazer Teste Novamente</button>
+            `;
+        }
+        
+        // Função para reiniciar o teste
+        function restartQuiz() {
+            currentQuestionIndex = 0;
+            totalScore = 0;
+            questionEl.style.display = 'block';
+            optionsEl.style.display = 'block';
+            resultDisplayEl.style.display = 'none';
+            loadQuestion();
+        }
+
+        // Inicia o teste ao carregar a página
+        window.onload = loadQuestion;
+    </script>
+
+</body>
+</html>

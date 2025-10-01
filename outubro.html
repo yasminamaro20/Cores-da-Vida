@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outubro Rosa: um combate contra o câncer de mama</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f9f9f9; /* Cor de fundo suave */
+        }
+
+        .hero {
+            position: relative;
+            height: 60vh; /* Altura da seção de cabeçalho */
+            /* A URL da imagem foi atualizada para usar o nome do arquivo que você forneceu */
+            background-image: url('img/outubro-rosa-1590x895.jpeg');
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px; /* Adiciona um pouco de padding caso o conteúdo seja menor que a altura */
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Overlay escuro para melhorar a legibilidade do texto */
+            z-index: 0; /* Garante que o overlay fique abaixo do conteúdo */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1; /* Garante que o conteúdo fique acima do overlay */
+            max-width: 90%; /* Limita a largura do conteúdo para telas pequenas */
+        }
+        
+        .hero .tag {
+            background-color: #e74c3c; /* Cor do fundo da tag 'SAÚDE' */
+            color: white;
+            padding: 5px 10px;
+            font-size: 0.8em;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 3px;
+            display: inline-block; /* Para que o padding e a borda funcionem corretamente */
+            margin-bottom: 10px; /* Espaço abaixo da tag */
+        }
+
+        .hero h1 {
+            font-size: 2.5em; /* Tamanho do título principal */
+            margin: 10px 0 0;
+            line-height: 1.2;
+        }
+        
+        .content-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: white; /* Fundo branco para o conteúdo do artigo */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave para destacar o artigo */
+            border-radius: 8px; /* Bordas arredondadas */
+            padding-top: 30px; /* Espaçamento interno */
+        }
+        
+        .section-title {
+            font-size: 1.8em;
+            color: #333;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e74c3c; /* Linha vermelha abaixo do título */
+            padding-bottom: 5px;
+            text-transform: uppercase; /* Deixa o título em maiúsculas */
+            font-weight: bold;
+        }
+
+        .subsection-title {
+            font-size: 1.4em;
+            color: #e74c3c; /* Cor vermelha para subtítulos */
+            margin-top: 30px;
+            font-weight: bold;
+        }
+        /* Botão Voltar */
+    .btn-voltar {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      display: inline-block;
+      padding: 10px 20px;
+      background: linear-gradient(90deg, #ad0d50, #ad0d50);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+        p, li {
+            font-size: 1em;
+            margin-bottom: 1em;
+            text-align: justify;
+        }
+        
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 1em;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .disclaimer {
+            background-color: #f0f0f0; /* Fundo levemente cinza para o disclaimer */
+            border-left: 5px solid #e74c3c;
+            padding: 20px;
+            margin-top: 40px;
+            margin-bottom: 30px; /* Espaço abaixo do disclaimer */
+            border-radius: 4px;
+        }
+        
+        .disclaimer h3 {
+            color: #e74c3c;
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+        
+        strong {
+            font-weight: bold;
+        }
+
+        .highlight {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        /* Linha divisória como nas imagens */
+        hr {
+            border: none;
+            border-top: 1px solid #eee;
+            margin: 30px 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 40vh; /* Menor altura em telas menores */
+            }
+            .hero h1 {
+                font-size: 1.8em;
+            }
+            .content-container {
+                margin: 20px auto;
+                padding: 0 15px;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+            .subsection-title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Botão Voltar -->
+  <a href="index.html" class="btn-voltar">← Voltar</a>
+   <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Outubro Rosa: um combate contra o câncer de mama</h1>
+        </div>
+    </header>
+
+    <div class="content-container">
+        <h2 class="section-title">OUTUBRO ROSA NO BRASIL</h2>
+
+        <p>Por aqui, o Outubro Rosa chegou no início dos anos 2000. A primeira ação pública ocorreu em São Paulo, quando o monumento Obelisco do Ibirapuera foi iluminado com a cor rosa. O movimento veio a ganhar visibilidade apenas em 2008, com o maior engajamento das cidades brasileiras.</p>
+
+        <p>Desde então, tem crescido ano após ano, fortalecendo o acesso à informação e a medidas de prevenção, o que contribui sobremaneira com a redução de casos no país.</p>
+
+        <h2 class="subsection-title">SIGNIFICADO DO LAÇO ROSA</h2>
+        <p>Grande símbolo da campanha, o laço rosa teve origem na primeira “Corrida pela Cura”, realizada em 1990 pela Fundação Susan G. Komen for the Cure. Na ocasião, a instituição distribuiu o item aos participantes, que acabou tornando-se popular, nos anos seguintes, para a divulgação de outras ações em combate ao câncer de mama.</p>
+
+        <h2 class="subsection-title">"MELHOR QUE PREVER É PREVENIR"</h2>
+        <p>Sempre engajado, este ano, o Sabin lançou uma campanha de prevenção que traz informações sobre os cuidados com a saúde de forma leve e divertida.</p>
+        <p>Intitulada “Melhor que prever é prevenir”, a campanha tem como protagonista a astróloga, numeróloga e escritora Marcia Sensitiva (agora, Marcia “Preventiva”), que, com sua irreverência e bom humor, fala da importância dos exames preventivos. Em vez de previsões, agora ela faz “prevenções”!</p>
+
+        <hr> <h2 class="section-title">O QUE É O CÂNCER DE MAMA?</h2>
+        <p>Tipo mais comum de câncer na população feminina, o <strong class="highlight">câncer de mama</strong> é uma doença resultante da multiplicação de células anormais no tecido mamário, ocorrendo o desenvolvimento de nódulos (tumores) e podendo atingir outros órgãos.</p>
+        <p>De acordo com a publicação “<strong class="highlight">Controle do câncer de mama no Brasil: dados e números 2024</strong>”, do Instituto Nacional de Câncer (INCA), estima-se que, entre 2023 e 2025, surgirão mais de 73 mil novos casos da doença. Ainda no estudo, é possível observar que “os óbitos por câncer de mama ocupam o primeiro lugar no país, representando 16,5% do total de óbitos por câncer”.</p>
+
+        <hr> <h2 class="section-title">QUAIS OS FATORES DE RISCO PARA O CÂNCER DE MAMA?</h2>
+        <p>O câncer de mama não tem uma causa única. Embora seja mais frequente em mulheres, é importante ressaltar que os homens também são acometidos pela doença – menos de 1% da população masculina.</p>
+        <p>A prevalência do desenvolvimento do câncer de mama está em mulheres acima dos 50 anos de idade, contudo a doença também alcança outras faixas etárias. E quando ocorre abaixo dos 40 anos, a doença <strong class="highlight">tende a ser mais agressiva</strong>.</p>
+        <p>Existem três principais fatores que aumentam o risco do câncer de mama:</p>
+
+        <h3 class="subsection-title">FATORES GENÉTICOS/HEREDITÁRIOS</h3>
+        <p>Envolvem o histórico familiar e estão, muitas vezes, relacionados a <strong class="highlight">mutações genéticas</strong> passadas entre parentes consanguíneos. O risco de desenvolvimento do câncer de mama de caráter hereditário ocorre em 5% a 10% dos casos.</p>
+
+        <h3 class="subsection-title">FATORES ENDÓCRINOS/HISTÓRIA REPRODUTIVA</h3>
+        <p>Associados à produção hormonal, especialmente à exposição ao estrogênio, os fatores endócrinos ou de história reprodutiva incluem aspectos como: menarca (primeira menstruação) precoce ou menopausa tardia; mulheres com gravidez após os 30 anos, ou que nunca gestaram ou amamentaram; aquelas que fazem/fizeram uso de medicamentos anticoncepcionais orais ou terapias de reposição hormonal.</p>
+        
+        <h3 class="subsection-title">FATORES COMPORTAMENTAIS/AMBIENTAIS</h3>
+        <p>Esses fatores estão diretamente ligados aos hábitos e estilo de vida. Ingestão de <strong class="highlight">álcool</strong> ou outras substâncias químicas, <strong class="highlight">tabagismo</strong>, <strong class="highlight">sedentarismo</strong>, <strong class="highlight">obesidade</strong> (principalmente após a menopausa) e exposição a radiações ionizantes contribuem para aumentar o risco da doença.</p>
+
+        <hr> <h2 class="section-title">É POSSÍVEL PREVENIR O CÂNCER DE MAMA?</h2>
+        <p>Aproximadamente 28% dos casos de câncer de mama podem ser evitados com a adoção de algumas medidas, entre elas:</p>
+        <ul>
+            <li>fazer o autoexame da mama;</li>
+            <li>praticar <strong class="highlight">atividades físicas</strong> regularmente;</li>
+            <li>manter o peso corporal;</li>
+            <li>ter uma <strong class="highlight">alimentação saudável</strong>;</li>
+            <li>evitar o consumo de bebidas alcoólicas, cigarro e alimentos processados;</li>
+            <li>realizar exames periodicamente e conversar com o seu médico.</li>
+        </ul>
+        <p>A partir da detecção precoce, é possível obter bons resultados, com altas taxas de remissão dos tumores e uma vida cheia de qualidade e longevidade. Sendo assim, <strong class="highlight">não deixe de fazer seus exames preventivos!</strong></p>
+
+        <hr> <h2 class="section-title">SINAIS E SINTOMAS DA DOENÇA</h2>
+        <p>A mulher precisa estar atenta a qualquer alteração suspeita. Alguns sinais devem ser observados no autoexame:</p>
+        <ul>
+            <li>presença de caroço na mama, que esteja fixo, endurecido e geralmente indolor;</li>
+            <li>presença de nódulos no pescoço ou nas axilas;</li>
+            <li>mudança na posição ou no formato do mamilo;</li>
+            <li>aspecto da pele da mama (vermelhidão ou aparência enrugada);</li>
+            <li>saída de líquido pelo mamilo, excetuando-se os períodos de <strong class="highlight">amamentação</strong>.</li>
+        </ul>
+
+        <hr> <h2 class="section-title">QUANDO FAZER O AUTOEXAME E A MAMOGRAFIA</h2>
+        <p>Eficaz, o autoexame da mama é muito simples de ser feito e pode (e deve) fazer parte da rotina de cuidado da mulher. Procure inserir essa prática em sua rotina diária. Observe, apalpe e sinta a sua mama. A realização do autoexame permite não apenas identificar qualquer possível alteração, como também aumentar a consciência sobre a mama e a percepção sobre o próprio corpo. Quer saber a melhor forma de fazer o autoexame? <a href="#">Clique aqui.</a></p>
+        <p>O Ministério da Saúde (MS) e a Sociedade Brasileira de Mastologia (SBM) recomendam a realização da <strong class="highlight">mamografia de rastreamento</strong>, ou seja, para mulheres assintomáticas, <strong class="highlight">a partir dos 40 anos</strong>, anualmente. Já aquelas entre 50 e 69 anos de idade devem fazer o exame a cada dois anos.</p>
+        <p>A <strong class="highlight">mamografia diagnóstica</strong>, que visa avaliar uma alteração suspeita na mama, pode ser feita em qualquer idade. Por isso, consulte seu médico de confiança para entender a melhor hora de fazer o exame.</p>
+
+        <hr> <h2 class="section-title">RECOMENDAÇÕES DIAGNÓSTICAS PARA O CÂNCER DE MAMA</h2>
+        <p>Ao identificar alterações na região das mamas ou axilas, não deixe de buscar o auxílio de um profissional da saúde o quanto antes. A mesma recomendação se aplica às mulheres com histórico de cânceres de mama ou de ovário na família, sobretudo mulheres jovens. Converse com seu médico, ele é a pessoa indicada para definir a melhor conduta a ser seguida.</p>
+
+        <div class="disclaimer">
+            <h3>SABIN AVISA:</h3>
+            <p>Este conteúdo é meramente informativo e não pretende substituir consultas médicas, avaliações por profissionais de saúde ou fornecer qualquer tipo de diagnóstico ou recomendação de exames.</p>
+            <p>Importante ressaltar que diagnósticos e tratamentos devem ser sempre indicados por uma avaliação médica individual. Em caso de dúvidas, converse com seu médico. Somente o profissional pode esclarecer todas as suas perguntas.</p>
+            <p>Lembre-se: qualquer decisão relacionada à sua saúde sem orientação profissional pode ser prejudicial.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

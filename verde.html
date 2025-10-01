@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setembro Verde - Doação de Órgãos e Tecidos</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+      color: #333;
+      background: linear-gradient(135deg, #f0fff4 0%, #f5fff8 100%);
+    }
+
+    .btn-voltar {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      display: inline-block;
+      padding: 10px 22px;
+      background: linear-gradient(90deg, #22c55e, #16a34a);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(34,197,94,0.3);
+      z-index: 1000;
+    }
+    .btn-voltar:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 14px rgba(34,197,94,0.4);
+      background: linear-gradient(90deg, #16a34a, #22c55e);
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 80px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(34,197,94,0.15);
+      border-top: 6px solid #22c55e;
+    }
+
+    .titulo {
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 25px;
+      color: #16a34a;
+      font-weight: bold;
+    }
+
+    .image-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .image-container img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(34,197,94,0.25);
+    }
+    .caption {
+      font-size: 15px;
+      color: #555;
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    p {
+      text-align: justify;
+      margin-bottom: 18px;
+      font-size: 1.05rem;
+    }
+
+    .first-letter {
+      font-size: 34px;
+      font-weight: bold;
+      color: #22c55e;
+      float: left;
+      line-height: 1;
+      margin-right: 8px;
+    }
+
+    strong {
+      color: #16a34a;
+    }
+
+    h2 {
+      color: #16a34a;
+      font-size: 1.6rem;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      border-left: 4px solid #22c55e;
+      padding-left: 15px;
+    }
+
+    a {
+      color: #16a34a;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #22c55e;
+      text-decoration: underline;
+    }
+
+    .destaque {
+      background: linear-gradient(135deg, #f0fdf4 0%, #f5fff8 100%);
+      padding: 20px;
+      border-left: 4px solid #22c55e;
+      margin: 25px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(34,197,94,0.1);
+    }
+
+    .coracao {
+      text-align: center;
+      font-size: 3rem;
+      color: #22c55e;
+      margin: 20px 0;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+      margin: 30px 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="btn-voltar">← Voltar</a>
+
+  <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <div class="container">
+    <h1 class="titulo">Setembro Verde: mês da doação de órgãos e tecidos</h1>
+
+    <div class="image-container">
+      <img src="img/setembro-verde-importancia-doacao-de-orgaos-adote.jpg" alt="Setembro Verde - Campanha de conscientização sobre doação de órgãos">
+      <p class="caption">Doe vida, doe órgãos - Um gesto de amor que transforma vidas</p>
+    </div>
+
+    <p><span class="first-letter">S</span>etembro é o mês dedicado à conscientização sobre a <strong>doação de órgãos e tecidos</strong>, marcado pela campanha <strong>Setembro Verde</strong>. A data principal é o <strong>dia 27 de setembro, Dia Nacional da Doação de Órgãos</strong>, instituído pela Lei nº 11.584/2007. O objetivo da campanha é estimular a reflexão sobre a importância desse ato solidário que pode salvar e transformar inúmeras vidas.</p>
+
+    <p>A doação de órgãos é um gesto de amor e generosidade que oferece esperança a milhares de pessoas que aguardam na fila de transplantes. No Brasil, o Sistema Nacional de Transplantes (SNT) coordena todo o processo, desde a captação até a distribuição dos órgãos, seguindo critérios técnicos e éticos rigorosos que garantem transparência e justiça na alocação.</p>
+
+    <div class="destaque">
+      <p><strong>Dados importantes:</strong> Segundo o Ministério da Saúde, mais de 40 mil pessoas aguardam por um transplante de órgãos no Brasil. Em 2024, o país realizou mais de 27 mil transplantes, mas a demanda ainda supera significativamente o número de doadores. Cada doador pode salvar até 8 vidas e beneficiar mais de 20 pessoas com a doação de tecidos.</p>
+    </div>
+
+    <h2>Tipos de doação</h2>
+    <p>A doação de órgãos pode ocorrer em duas situações distintas. A <strong>doação após morte encefálica</strong> permite a retirada de coração, pulmões, fígado, pâncreas, rins, córneas, ossos, tendões, pele e válvulas cardíacas. Já a <strong>doação em vida</strong> é possível para rim, parte do fígado, parte da medula óssea e parte do pulmão, desde que não comprometa a saúde do doador.</p>
+
+    <p>A morte encefálica é a parada definitiva e irreversível do cérebro, diagnosticada através de critérios médicos rigorosos estabelecidos pelo Conselho Federal de Medicina. Nessa condição, embora o coração continue batendo com ajuda de aparelhos, não há possibilidade de recuperação, e os órgãos podem ser doados para transplante.</p>
+
+    <h2>Como se tornar um doador</h2>
+    <p>No Brasil, a doação de órgãos depende da autorização familiar. Por isso, o passo mais importante para ser doador é <strong>informar sua família sobre o desejo de doar</strong>. Não é necessário deixar nada por escrito em documento, mas é fundamental que seus familiares conheçam sua vontade, pois serão eles que tomarão a decisão final no momento oportuno.</p>
+
+    <p>A manifestação de vontade na Carteira Nacional de Habilitação (CNH) ou em outros documentos não tem validade legal. O que realmente importa é o diálogo com a família. Estudos mostram que quando a família conhece o desejo do falecido de ser doador, a taxa de autorização para doação aumenta significativamente.</p>
+
+    <div class="coracao">💚</div>
+
+    <h2>Mitos e verdades sobre doação</h2>
+    <p>Existem muitos mitos que cercam a doação de órgãos. É importante esclarecer que a doação não deforma o corpo, pois a retirada dos órgãos é feita através de procedimento cirúrgico que preserva a aparência. Pessoas de todas as idades e condições de saúde podem manifestar o desejo de doar, cabendo à equipe médica avaliar a viabilidade dos órgãos no momento da doação.</p>
+
+    <p>Outro mito comum é que hospitais não fazem o máximo para salvar a vida de potenciais doadores. Na verdade, equipes completamente distintas cuidam do paciente e realizam o processo de captação de órgãos. O atendimento médico nunca é comprometido pela possibilidade de doação.</p>
+
+    <h2>O processo de transplante</h2>
+    <p>O transplante de órgãos no Brasil é regulamentado e totalmente gratuito, realizado exclusivamente pelo Sistema Único de Saúde (SUS) ou por ele custeado. A lista de espera é única, organizada por estado, e segue critérios técnicos como compatibilidade sanguínea, compatibilidade genética, tempo de espera e gravidade do caso.</p>
+
+    <p>Quando um potencial doador é identificado, a Central de Transplantes é acionada. Após a confirmação da morte encefálica e a autorização familiar, inicia-se o processo de alocação dos órgãos. A equipe médica trabalha contra o tempo, pois cada órgão tem um período específico de viabilidade fora do corpo.</p>
+
+    <div class="destaque">
+      <p><strong>Tempo de viabilidade dos órgãos:</strong> O coração pode ser preservado por até 4 horas, os pulmões por 4 a 6 horas, o fígado por até 12 horas e os rins por até 48 horas. As córneas, por outro lado, podem ser preservadas por até 14 dias. Por isso, agilidade e coordenação são fundamentais em todo o processo.</p>
+    </div>
+
+    <h2>O papel da família</h2>
+    <p>O momento da perda de um ente querido é extremamente difícil, e a decisão sobre a doação de órgãos torna-se ainda mais delicada. Por isso, ter conversado sobre o assunto previamente facilita muito esse processo. As equipes de saúde oferecem todo o apoio necessário às famílias, esclarecendo dúvidas e respeitando o tempo de cada um.</p>
+
+    <p>Muitas famílias relatam que autorizar a doação trouxe conforto em meio à dor, por saberem que a vida de seu ente querido continua de alguma forma, ajudando outras pessoas. O gesto de doar traz esperança e vida em um momento de despedida.</p>
+
+    <h2>Avanços e desafios</h2>
+    <p>O Brasil possui um dos maiores programas públicos de transplantes do mundo. Nos últimos anos, o país tem aumentado consistentemente o número de doadores e transplantes realizados, mas ainda há muito a avançar. A taxa de recusa familiar, que gira em torno de 40%, é um dos principais desafios a serem superados.</p>
+
+    <p>Investimentos em campanhas de conscientização, capacitação de equipes médicas, melhoria na infraestrutura hospitalar e educação da população são fundamentais para aumentar o número de doações e reduzir as filas de espera. O Setembro Verde cumpre papel essencial nesse processo de sensibilização.</p>
+
+    <p>Doar órgãos é um ato de solidariedade que transcende a própria vida. É oferecer a alguém a chance de viver, de ver os filhos crescerem, de realizar sonhos e construir memórias. Converse com sua família sobre o desejo de ser doador. Essa conversa pode salvar vidas.</p>
+
+    <footer>
+      &copy; 2025 Setembro Verde | Doação de Órgãos - Doe Vida, Seja a Esperança
+    </footer>
+  </div>
+</body>
+</html>
